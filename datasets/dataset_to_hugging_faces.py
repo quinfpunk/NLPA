@@ -26,6 +26,7 @@ def to_hugging_faces(beginning_path : str, paths : list[str], status : int) -> D
             dict_dataset["is_generated"] = [(str(status))]
     return Dataset.from_dict(dict_dataset)
 
-beginning_path = 'FormAI/DATASET/'
-paths = os.listdir(beginning_path)
-to_hugging_faces(beginning_path, paths, 1)
+if __name__ == "__main__":
+    beginning_path = 'FormAI/DATASET/'
+    paths = os.listdir(beginning_path)
+    to_hugging_faces(beginning_path, paths, 1)
