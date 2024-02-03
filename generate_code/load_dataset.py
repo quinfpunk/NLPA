@@ -1,4 +1,5 @@
 from pathlib import Path
+import json
 
 def load_dataset(lang : str, part : str, buffer_size : int):
     """
@@ -10,7 +11,7 @@ def load_dataset(lang : str, part : str, buffer_size : int):
     """
     path_q = Path(f'{lang}/{part}/{part}.question')
     path_c = Path(f'{lang}/{part}/{part}.code')
-    res = {"question" : [], "code" : []}
+    res = {"question" : [], "code" : [], "lang": lang}
     with open(path_q, 'r') as f_q:
         with open(path_c, 'r') as f_c:
             for i in range(buffer_size):
@@ -20,5 +21,5 @@ def load_dataset(lang : str, part : str, buffer_size : int):
                 res["code"].append(code)
     return res
 
-json = load_dataset("python", "dev", 20)
-print(json)
+#json = load_dataset("python", "dev", 20)
+#print(json)
