@@ -1,6 +1,6 @@
 from load_dataset import load_dataset
 
-def generate_prompt(json_dataset, num_prompt : int) -> str:
+def generate_prompt(json_dataset, num_prompt : int):
     questions = json_dataset["question"]
     codes = json_dataset["code"]
     lang = json_dataset["lang"]
