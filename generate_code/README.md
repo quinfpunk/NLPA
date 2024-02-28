@@ -48,4 +48,4 @@ Options:
 - `--captioned-path` (*optional*): the path from which to load the captioned dataset. 
 - `--output-path` (*optional*): the path in which to save the dataset.
 - `--model` (*optional*): name of the model from the hugging face hub. If omitted, use the Gemini API (recommended).
-- `--sample-size`: the number of files to select from the captioned dataset.
+- `--sample-size` (*optional*): the number of files to select from the captioned dataset.
