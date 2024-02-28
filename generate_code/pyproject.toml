@@ -14,6 +14,10 @@ python = "^3.11"
 datasets = "^2.17.1"
 torch = "^2.2.1"
 transformers = "^4.38.1"
+hf-transfer = "^0.1.5"
+mlx = "^0.4.0"
+google-generativeai = "^0.3.2"
+click = "^8.1.7"
 
 [build-system]
 requires = ["poetry-core"]
