@@ -1,0 +1,23 @@
+Your task is to generate a $language program of at most **$size** characters that matches a given description.
+For instance, consider the following description:
+
+<desc>
+Define a function that accepts two integers and returns their sum. Call this function with 42 and 12".
+</desc>
+
+A possible program could be:
+
+def add(a: int, b: int):
+    return a + b
+
+add(42, 12)
+
+Note that you shall not use any external knowledge you may have as you must base yourself solely on the code description. For instance, is the description mentions that the code is written be the Apache foundation, ignore this and focus on the code itself - do not try to imitate their specific style. Also not that a SHORT program is preferable.
+
+Now, consider this description:
+
+<desc>
+$caption
+</desc>
+
+A corresponding code is:

@@ -1,0 +1,21 @@
+Knowing that the programming language is $language, your task is to generate a detailed caption for a program.
+For instance, consider the following program:
+```py
+def add(a: int, b: int):
+    return a + b
+
+add(42, 12)
+```
+
+A possible description could be:
+
+  Define a function that accepts two integers and returns their sum. Call this function with 42 and 12".
+
+Note that a longer program might demand a more detailed description: the description must be sufficient to write an equivalent snippet without further context.
+
+Now consider this code:
+```py
+$code
+```
+
+A suited description is:

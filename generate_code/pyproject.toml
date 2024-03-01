@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "generate-code"
+version = "0.1.0"
+description = "Build a dataset of generated vs human-written code"
+authors = [
+    "Rostan Tabet <rostan.tabet@epita.fr>",
+    "Timothée Strouk <timothee.strouk@epita.fr>",
+]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+datasets = "^2.17.1"
+torch = "^2.2.1"
+transformers = "^4.38.1"
+hf-transfer = "^0.1.5"
+mlx = "^0.4.0"
+google-generativeai = "^0.3.2"
+click = "^8.1.7"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
