@@ -10,6 +10,7 @@ from datasets import Dataset, IterableDataset, load_dataset
 from build_dataset import build_generated_captions, build_generated_codes
 from constants import *
 from llm import gemini_infer, infer, load_model
+from postprocess import cleanup
 
 
 def _lazy_to_eager_dataset(dataset: IterableDataset) -> Dataset:
@@ -91,6 +92,18 @@ def gen_code(
         batch_size=batch_size,
     )
     generated.save_to_disk(output_path)
+
+
+@cli.command()
+@click.option("--input-path", default=FINAL_DS_PATH)
+@click.option("--output-path", default=CLEANED_DS_PATH)
+def post_process(input_path: pathlib.Path, output_path: pathlib.Path):
+    """Apply post-processing to the final dataset"""
+
+    dataset = Dataset.load_from_disk(input_path)
+    cleaned = cleanup(dataset)
+
+    cleaned.to_parquet(output_path)
 
 
 if __name__ == "__main__":
